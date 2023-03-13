@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentRealTime">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:text="現在時間"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv1"
+        android:layout_centerHorizontal="true"
+        android:text="5:00"
+        android:textSize="50sp"/>
+
+
+
+
+    <Button
+        android:id="@+id/btnResetTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset Time"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"/>
+
+    <Button
+        android:id="@+id/btnAddTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Time"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"/>
+
+    <Button
+        android:id="@+id/btnRec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="推薦附近景點"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/btnResetTime"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/tvTime"
+        android:layout_above="@id/btnTripMap"
+        android:paddingVertical="20dp">
+
+        <RelativeLayout
+            android:id="@+id/rlNow"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/txt_radiuborder">
+
+            <TextView
+                android:id="@+id/tvNow1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="當前行程"
+                android:textSize="20dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/tvNowPlace"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tvNow1"
+                android:layout_above="@id/tvNowBeginTime"
+                android:text="交通大學"
+                android:textSize="40sp"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tvNowBeginTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0:00"
+                android:textSize="40sp"
+                android:layout_above="@id/pbNowTime"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:id="@+id/tvNowEndTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0:00"
+                android:textSize="40sp"
+                android:layout_above="@id/pbNowTime"
+                android:layout_alignParentRight="true"/>
+
+
+            <ProgressBar
+                android:id="@+id/pbNowTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlNext"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4"
+            android:background="@drawable/txt_radiuborder">
+            <TextView
+                android:id="@+id/txNext1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="下一個行程"
+                android:textSize="20dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/tvNextInfo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/txNext1"
+                android:text=""
+                android:textSize="20dp"
+                android:gravity="center"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnTripMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="View On Map"
+        android:layout_above="@id/btnRec"/>
+
+</RelativeLayout>

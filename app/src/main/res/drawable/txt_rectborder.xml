@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- 设置一个边框 -->
+    <stroke android:width="5px" android:color="@color/purple_500"/>
+
+    <!-- 渐变 -->
+    <gradient
+        android:angle="270"
+        android:endColor="@color/c9f44d3"
+        android:startColor="@color/c9f44d3" />
+
+    <!-- 设置一下边距,让空间大一点 -->
+    <corners
+        android:bottomLeftRadius="40px"
+        android:bottomRightRadius="40px"
+        android:topLeftRadius="40px"
+        android:topRightRadius="40px" />
+    <padding
+        android:left="5dp"
+        android:top="5dp"
+        android:right="5dp"
+        android:bottom="5dp"/>
+
+</shape>

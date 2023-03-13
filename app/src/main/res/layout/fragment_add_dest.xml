@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentAddDest">
+
+
+    <RelativeLayout
+        android:id="@+id/rlDestName"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:paddingHorizontal="10dp">
+        <TextView
+            android:id="@+id/tvDestName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="輸入地點"
+            android:textSize="20sp"
+            android:gravity="center"/>
+        <EditText
+            android:id="@+id/etDestName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:maxLines="1"
+            android:inputType="text"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/tvDestName"
+            android:gravity="center"/>
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tvDestTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlDestName"
+        android:layout_marginTop="20dp"
+        android:text="  選擇時段"
+        android:textSize="20sp"
+        android:gravity="center"/>
+    <RelativeLayout
+        android:id="@+id/rlDestTime"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/tvDestTime"
+        android:paddingHorizontal="10dp">
+
+        <NumberPicker
+            android:id="@+id/npDestStart_H"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"/>
+        <NumberPicker
+            android:id="@+id/npDestStart_M"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/npDestStart_H"/>
+        <NumberPicker
+            android:id="@+id/npDestEnd_H"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/npDestEnd_M" />
+        <NumberPicker
+            android:id="@+id/npDestEnd_M"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/npDestStart_M"
+            android:layout_toLeftOf="@id/npDestEnd_H"
+            android:text="到"
+            android:textSize="20sp"
+            android:gravity="center"/>
+
+    </RelativeLayout>
+    <Button
+        android:id="@+id/btnRec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recommend"
+        android:layout_below="@id/rlDestTime"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:id="@+id/llBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="40dp"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btnCheck"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="確認"/>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"/>
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="取消" />
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>
